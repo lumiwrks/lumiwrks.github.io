@@ -1,0 +1,156 @@
+/* © lumiwrks. All rights reserved. */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Flow+Circular&family=Libre+Barcode+128&family=Playfair:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+/*
+available-fonts {
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Figtree', sans-serif;
+    font-family: 'Flow Circular', cursive;
+    font-family: 'Libre Barcode 128', cursive;
+    font-family: 'Playfair', serif;
+    font-family: 'Wix Madefor Display', sans-serif;
+}
+*/
+
+/* Credit: meyerweb.com, Reset Reloaded (2000) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+
+	font-family: inherit;
+	vertical-align: baseline;
+}
+body {
+	color: black;
+	background: white;
+}
+
+
+/* End of code, Reset Reloaded */
+
+:root {
+    --black: #010203;
+    --white: #ffffff;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+img {
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
+    max-width: 120px;
+    position: fixed;
+}
+
+.sh {
+    position: relative;
+    padding: 10px;
+    margin: 0;
+    color: #010203;
+  }
+  
+  .sh-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:70%;
+    height: 100%;
+    background-image: url('https://cdn.discordapp.com/attachments/1121024080552927294/1121712330766565406/DSC_0061.JPG');
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    padding: 10px;
+    margin-right: -10px;
+    padding-right: -20px;
+  }
+  
+  .sh-inner:hover {
+    opacity: 1;
+  }
+
+main {
+    position: fixed;
+
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%);
+
+    padding: 50px;
+    z-index: -10;
+
+}
+
+main h1 {
+    font-weight: 900;
+}
+
+p {
+    margin-top: 10px;
+    text-align: justify;
+
+    
+}
+
+li {
+    display:inline;
+    margin: 10px;
+    float:right;
+}
+
+a:hover {
+    text-decoration:line-through;
+}
+
+.header {
+    padding: 10px;
+
+}
+
+.inv {
+    display:contents;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        position: fixed;
+        left: 0;
+        /* bring your own prefixes */
+        transform: translate(0);
+    
+        text-align: left;
+        padding: 50px;
+
+        margin-right: 0px;
+    }
+
+    .inv {
+        display:none;
+    }
+  }
