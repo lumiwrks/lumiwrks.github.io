@@ -77,8 +77,26 @@ blockquote, q {
 /* End of code, Reset Reloaded */
 
 :root {
-    --black: #010203;
+    --black: #071726;
     --white: #ffffff;
+}
+
+html, body {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+    overflow-x: hidden;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+a:hover {
+    text-decoration:line-through;
+}
+
+main h1 {
+    font-weight: 800;
+    color: #010203;
 }
 
 img {
@@ -89,12 +107,8 @@ img {
     position: fixed;
 }
 
-html, body {
-    width: auto;
-    margin: 0;
-    padding: 0;
-    color: var(--black);
-    font-family: 'Atkinson Hyperlegible', sans-serif;
+p {
+    margin-top: 10px;
 }
 
 .sh {
@@ -103,16 +117,20 @@ html, body {
     margin: 0;
     color: #010203;
   }
+
+  nav {
+    overflow-y: hidden;
+}
   
   .sh-inner {
     position: absolute;
     top: 0;
     left: 0;
     width:70%;
-    height: 50%;
+    height: 100%;
     background-image: url('https://cdn.discordapp.com/attachments/1121024080552927294/1121712330766565406/DSC_0061.JPG');
     opacity: 0;
-    transition: opacity 0.4s;
+    transition: opacity 0.5s;
 
     padding: 10px;
     margin-right: -10px;
@@ -122,13 +140,20 @@ html, body {
   .sh-inner:hover {
     opacity: 1;
   }
-
-  li {
+  
+li {
     display:inline;
     margin: 10px;
     float:right;
 }
 
-a:hover {
-    text-decoration:line-through;
+.header {
+    padding: 10px;
+
+}
+
+main {
+    margin-left: 30px;
+    position: fixed;
+    text-align: left;
 }
