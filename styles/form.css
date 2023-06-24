@@ -6,9 +6,6 @@
   padding: 0;
 }
 
-ul, ol {
-  list-style: none;
-}
 
 a {
   text-decoration: none;
@@ -45,74 +42,31 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-family: inherit;
 	vertical-align: baseline;
 }
-/* remember to define focus styles! */
-:focus {
-	outline: 0;
-}
 body {
-	line-height: 1.2;
 	color: black;
 	background: white;
 }
-ol, ul {
-	list-style: none;
-}
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-	border-collapse: separate;
-	border-spacing: 0;
-}
-caption, th, td {
-	text-align: left;
-	font-weight: normal;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: "";
-}
-blockquote, q {
-	quotes: "" "";
-}
+
 
 /* End of code, Reset Reloaded */
 
 :root {
-    --black: #071726;
+    --black: #010203;
     --white: #ffffff;
 }
 
 html, body {
-    width: auto;
     margin: 0;
     padding: 0;
     color: var(--black);
-    overflow-x: hidden;
     font-family: 'Atkinson Hyperlegible', sans-serif;
-}
-
-a:hover {
-    text-decoration:line-through;
-}
-
-main h1 {
-    font-weight: 900;
-    color: #ffffff;
-
-
-    background-color: #010203;
-    padding: 10px;
 }
 
 img {
     -webkit-filter: invert(100%); /* Safari/Chrome */
     filter: invert(100%);
-
     max-width: 120px;
     position: fixed;
-}
-
-p {
-    margin-top: 10px;
 }
 
 .sh {
@@ -121,10 +75,6 @@ p {
     margin: 0;
     color: #010203;
   }
-
-  nav {
-    overflow-y: hidden;
-}
   
   .sh-inner {
     position: absolute;
@@ -144,11 +94,39 @@ p {
   .sh-inner:hover {
     opacity: 1;
   }
-  
+
+main {
+    margin-left: 60px;
+
+    height: auto;
+    width: 600px;
+    z-index: -10;
+
+    text-align: left;
+    padding: 50px;
+
+    margin-right: -100px;
+}
+
+main h1 {
+    font-weight: 900;
+}
+
+p {
+    margin-top: 10px;
+    text-align: justify;
+
+    
+}
+
 li {
     display:inline;
     margin: 10px;
     float:right;
+}
+
+a:hover {
+    text-decoration:line-through;
 }
 
 .header {
@@ -156,12 +134,24 @@ li {
 
 }
 
-main {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-
-    text-align: center;
+.inv {
+    display:contents;
 }
+
+@media only screen and (max-width: 600px) {
+    main {
+        position: fixed;
+        left: 0;
+        /* bring your own prefixes */
+        transform: translate(0);
+    
+        text-align: left;
+        padding: 50px;
+
+        margin-right: 0px;
+    }
+
+    .inv {
+        display:none;
+    }
+  }
