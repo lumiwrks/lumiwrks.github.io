@@ -1,0 +1,258 @@
+/* © lumiwrks. All rights reserved. */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Flow+Circular&family=Libre+Barcode+128&family=Playfair:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+available-fonts {
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Figtree', sans-serif;
+    font-family: 'Flow Circular', cursive;
+    font-family: 'Libre Barcode 128', cursive;
+    font-family: 'Playfair', serif;
+    font-family: 'Wix Madefor Display', sans-serif;
+}
+*/
+
+:root {
+    --black: #071726;
+    --white: #ffffff;
+}
+
+html, body {
+  
+    width: auto;
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+
+    background-color: #e3e3e3;
+}
+
+main {
+  z-index: -1;
+}
+  
+/* card */
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  min-width: 200px;
+
+  margin: 20px;
+}
+
+.top-arrow {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+}
+
+.catnum {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+}
+
+.content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  word-wrap: break-word;
+}
+
+h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+#cards {
+  display: flex;
+  margin-top: 0px;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  #cards {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    min-width: 200px;
+  
+    margin: 20px;
+    margin-right: 0px;
+  }
+}
+
+/* nav */
+
+nav {
+  z-index: 999;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+
+  font-size: 20px;
+  justify-content: center;
+}
+
+.navbar li {
+  margin-right: 20px;
+  padding: 10px;
+  color: white;
+}
+
+.navbar li:hover {
+  background-color: #505050;
+  color: #353535;
+}
+
+.navbar li:last-child {
+  margin-right: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+#header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgb(51,51,51);
+background: -moz-linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(188,188,188,1) 19%, rgba(241,241,241,1) 50%, rgba(255,255,255,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(188,188,188,1) 19%, rgba(241,241,241,1) 50%, rgba(255,255,255,1) 100%);
+background: linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(188,188,188,1) 19%, rgba(241,241,241,1) 50%, rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#333333",endColorstr="#ffffff",GradientType=1);
+}
+
+#header h1 {
+  font-size: 15vh;
+  margin: 20px;
+}
+
+#catalogue h1, #about h1, #contact p {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 10vh;
+}
+
+p.comingsoon , #about p, #contact p {
+  margin-top: 10px;
+  margin-left: 60px;
+  margin-right: 20vh;
+  font-size: 20px;
+}
+
+#contact h2 {
+  margin-left: 30px;
+  font-size: 30px;
+}
+
+/* custom scrollbar */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #333333 #CCCCCC;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #CCCCCC;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #CCCCCC;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #ccc;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #333333;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #333333;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #8D8D8D;
+}
+
+  /* Bootstrap Footer */
+
+  footer {
+    background-color: #333333;
+    padding: 50px;
+    color: var(--white);
+  }
+
+  footer a {
+    color: var(--white);
+  }
+  
+
+/* Credit to   
+  https://epicbootstrap.com/snippets/footer-dark */
+  
